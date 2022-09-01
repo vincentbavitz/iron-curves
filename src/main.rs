@@ -8,7 +8,7 @@ fn main() {
 
 // Ref. https://docs.rs/x11/latest/x11/xinput2/fn.XIWarpPointer.html
 fn move_mouse() {
-
+    // We want to move the mouse as xdotool does, but smooooothly.
     unsafe {
         x11::xinput2::XIWarpPointer(0, 0, 0, 5, 5.0, 5.0, 4, 3, 2.0, 1.0);
     }
